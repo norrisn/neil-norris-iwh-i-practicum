@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        title= title
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1= title
+
+        a(href="/") Return to the homepage
+
+        form(action="/update-cobj" method="POST")
+            div
+                label(for="name") Name
+                input(type="text" id="name" name="name" required)
+
+            div
+                label(for="game") Game
+                input(type="text" id="game" name="game" required)
+
+            div
+                label(for="role") Role
+                input(type="text" id="role" name="role" required)
+
+            button(type="submit") Add Game Character
